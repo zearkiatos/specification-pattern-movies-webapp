@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: develop.Dockerfile
+    container_name: "specification-pattern-movies-webapp"
+    ports:
+      - "0.0.0.0:8001:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    expose:
+      - "8000"
+    tty: true
