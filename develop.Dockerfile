@@ -11,6 +11,7 @@ COPY [".","."]
 
 CMD npm install -g @angular/cli && \
     npm rebuild node-sass && \
-    npm install && \
-    npm run dev
+    npm install
+ENTRYPOINT ["sh", "./docker/entrypoint.sh"]
+
 EXPOSE 8000
