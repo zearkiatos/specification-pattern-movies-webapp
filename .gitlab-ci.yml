@@ -33,7 +33,7 @@ build-app:
     - echo "NODE_ENV=${NODE_ENV}" > .env
     - echo "NG_CLI_ANALYTICS=${NG_CLI_ANALYTICS}" >> .env
     - echo "MOVIES_API_BASE_URL=${MOVIES_API_BASE_URL}" >> .env
-    - npm run build
+    - npm run deploy
   artifacts:
     expire_in: 1hr
     paths:
