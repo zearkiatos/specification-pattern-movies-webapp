@@ -34,7 +34,7 @@ jobs:
         NG_CLI_ANALYTICS: ${{ secrets.NG_CLI_ANALYTICS }}
         MOVIES_API_BASE_URL: ${{ secrets.MOVIES_API_BASE_URL }}
     - name: Build
-      run: npm run build
+      run: npm run deploy
     - name: Upload production-ready build files
       uses: actions/upload-artifact@v2
       with:
