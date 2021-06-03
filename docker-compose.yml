@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: movies-webapp
+    volumes: 
+      - ".:/app"
+    env_file:
+      - .env
+    ports:
+      - "80:80"
+    tty: true

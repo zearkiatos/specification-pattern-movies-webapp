@@ -1,5 +1,18 @@
 version: "3.9"
 services:
+  api:
+    build:
+      context: ../specification-pattern-movies-api/
+      dockerfile: ./MoviesApi/Dockerfile
+    container_name: specification-pattern-movies-api
+    volumes:
+      - "../specification-pattern-movies-api/MoviesApi/.:/source"
+    env_file:
+      - ../specification-pattern-movies-api/MoviesApi/.env
+    ports:
+      - "0.0.0.0:8080:80"
+    expose:
+      - "80"
   webapp:
     build:
       context: .
