@@ -1,5 +1,15 @@
 # SpecificationPatternMoviesWebapp
 
+## Project link
+
+Netlify: [https://focused-poincare-65ac58.netlify.app](https://focused-poincare-65ac58.netlify.app)
+
+Vercel: [https://specification-pattern-movies-webapp.vercel.app/](https://specification-pattern-movies-webapp.vercel.app/)
+
+Github: [https://zearkiatos.github.io/specification-pattern-movies-webapp/](https://zearkiatos.github.io/specification-pattern-movies-webapp/)
+
+Gitlab🦊: [https://caprilespe.gitlab.io/streams-client-webapp/](https://caprilespe.gitlab.io/streams-client-webapp/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
 ## Development server
