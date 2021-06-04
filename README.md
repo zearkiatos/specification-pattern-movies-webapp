@@ -8,13 +8,13 @@ Vercel: [https://specification-pattern-movies-webapp.vercel.app/](https://specif
 
 Github: [https://zearkiatos.github.io/specification-pattern-movies-webapp/](https://zearkiatos.github.io/specification-pattern-movies-webapp/)
 
-Gitlab🦊: [https://caprilespe.gitlab.io/streams-client-webapp/](https://caprilespe.gitlab.io/streams-client-webapp/)
+Gitlab🦊: [https://caprilespe.gitlab.io/specification-pattern-movies-webapp/](https://caprilespe.gitlab.io/specification-pattern-movies-webapp/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:8000/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
