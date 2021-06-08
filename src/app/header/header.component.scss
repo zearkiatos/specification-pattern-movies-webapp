@@ -1,0 +1,24 @@
+
+.headerContainer {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.7) 10%,rgba(0,0,0,0));
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+    z-index: 9;
+    top: 0px;
+    
+    > .item {
+      padding: 15px;
+      color: white;
+      cursor: default;
+      display: inline-block;
+    }
+  }
+  
+  .branding {
+    border-top: none !important;
+    border-rignt: none !important;
+  }
+
+  .span-icon {
+      font-size: 28pt;
+  }
