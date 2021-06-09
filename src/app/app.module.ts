@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
+import { MoviesComponent } from './movies/movies.component';
 
 const appRoutes: Routes = [
   {
@@ -19,7 +21,9 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    MovieCardComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
