@@ -1,5 +1,5 @@
-import { MovieResponse } from './movie-response';
-export interface MovieRepository {
+import { MovieResponse } from "./movie-response";
 
+export interface MovieRepository {
     SearchAll() : MovieResponse;
 }

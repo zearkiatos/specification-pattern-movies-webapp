@@ -1,13 +1,15 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { HttpHeaders, HttpParams } from '@angular/common/http';
 import { JsonConvert } from 'json2typescript';
 
-export abstract class ApiRepository {
-  private httpParams: HttpParams;
-  private jsonConvert: JsonConvert;
-  private head: HttpHeaders;
+@Injectable()
+export class ApiBase {
+  protected httpParams: HttpParams;
+  protected jsonConvert: JsonConvert;
+  protected head: HttpHeaders;
 
 
-  constructor(private http: HttpClient) {
+  constructor() {
     this.httpParams = new HttpParams();
     this.jsonConvert = new JsonConvert();
     this.head = new HttpHeaders();
