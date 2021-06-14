@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { MoviesComponent } from './movies/movies.component';
+import { TruncatePipe } from './pipe/truncate.pipe';
+import { ArrayToStringPipe } from './pipe/array-to-string.pipe';
 
 const appRoutes: Routes = [
   {
@@ -23,15 +26,19 @@ const appRoutes: Routes = [
     HeaderComponent,
     SearchComponent,
     MovieCardComponent,
-    MoviesComponent
+    MoviesComponent,
+    TruncatePipe,
+    ArrayToStringPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

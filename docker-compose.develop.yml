@@ -26,4 +26,8 @@ services:
       - .env
     expose:
       - "8000"
+    depends_on: 
+        - api
+    links: 
+        - api
     tty: true

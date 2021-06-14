@@ -35,10 +35,8 @@ export class MovieResponse {
     public set PageNumber(pageNumber: number) {
         this.pageNumber = pageNumber;
     }
-
     @JsonProperty("movies")
-
-    private movies: Movie[] = [];
+    public movies: Movie[] = [];
 
     public get Movies(): Movie[] {
         return this.movies;

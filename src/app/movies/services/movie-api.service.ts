@@ -6,13 +6,13 @@ import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export abstract class MovieApiService extends ApiBase {
+export class MovieApiService extends ApiBase {
   private url:string = '';
   constructor(private http: HttpClient) {
     super();
   }
   SearchAll(): Observable<MovieResponse> {
-    this.url = `${environment.moviesApiBaseUrl}movie`;
+    this.url = `${environment.moviesApiBaseUrl}Movie`;
 
     return this.http.get<MovieResponse>(this.url, { headers: this.head });
   }

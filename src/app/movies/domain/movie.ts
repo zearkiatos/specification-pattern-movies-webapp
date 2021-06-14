@@ -1,6 +1,5 @@
 import { JsonObject, JsonProperty } from 'json2typescript';
-
-@JsonObject("movieResponse")
+@JsonObject("movie")
 export class Movie {
     @JsonProperty("id")
     private id: number = 0;
