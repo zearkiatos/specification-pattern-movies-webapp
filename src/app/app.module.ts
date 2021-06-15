@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +13,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 import { MoviesComponent } from './movies/movies.component';
 import { TruncatePipe } from './pipe/truncate.pipe';
 import { ArrayToStringPipe } from './pipe/array-to-string.pipe';
+import { SkeletonLoaderCardComponent } from './skeleton-loader-card/skeleton-loader-card.component';
 
 const appRoutes: Routes = [
   {
@@ -28,14 +30,16 @@ const appRoutes: Routes = [
     MovieCardComponent,
     MoviesComponent,
     TruncatePipe,
-    ArrayToStringPipe
+    ArrayToStringPipe,
+    SkeletonLoaderCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSkeletonLoaderModule
   ],
   providers: [
   ],
