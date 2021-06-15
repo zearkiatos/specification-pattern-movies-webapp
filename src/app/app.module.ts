@@ -14,6 +14,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { TruncatePipe } from './pipe/truncate.pipe';
 import { ArrayToStringPipe } from './pipe/array-to-string.pipe';
 import { SkeletonLoaderCardComponent } from './skeleton-loader-card/skeleton-loader-card.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 const appRoutes: Routes = [
   {
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     MoviesComponent,
     TruncatePipe,
     ArrayToStringPipe,
-    SkeletonLoaderCardComponent
+    SkeletonLoaderCardComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
