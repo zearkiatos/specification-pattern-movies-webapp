@@ -12,7 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  nextPage(page:any) {
+  goToNextPage (page: any) {
+    console.log("Data");
     console.log(`Data: ${page}`);
   }
 

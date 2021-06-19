@@ -10,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginationComponent implements OnInit {
   next:number = 0;
-  @Output() public nextPage = new EventEmitter<number>();
+  @Output() nextPage: EventEmitter<number>;
   @Input() public currentPage:number = 1;
-  constructor() { 
+  constructor() {
+    this.nextPage = new EventEmitter<number>();
   }
 
   ngOnInit(): void {
