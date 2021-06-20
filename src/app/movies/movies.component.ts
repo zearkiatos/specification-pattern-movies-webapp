@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { JsonConvert } from 'json2typescript';
 import { MovieResponse } from './domain/movie-response';
 import { MovieApiRepository } from './Infrastructure/movie-api-repository';
@@ -17,8 +17,10 @@ export class MoviesComponent implements OnInit {
   @Output()
   public movieResponse:MovieResponse= new MovieResponse();
 
+  private criterial: any;
 
-  constructor(private movieApiRepository: MovieApiRepository) { }
+
+  constructor(private movieApiRepository: MovieApiRepository) {}
 
   ngOnInit(): void {
     this.movieApiRepository.SearchAll().subscribe(data =>  {
@@ -29,4 +31,16 @@ export class MoviesComponent implements OnInit {
     });
   }
 
+  goToPage (page: any) : void {
+    this.criterial = {
+      ...this.criterial,
+      offset: page
+    };
+    this.movieApiRepository.SearchByCriterial(this.criterial).subscribe(data =>  {
+      if(data) {
+        let jsonConvert: JsonConvert = new JsonConvert();
+        this.movieResponse = jsonConvert.deserializeObject(data, MovieResponse);
+      }
+    });
+  }
 }

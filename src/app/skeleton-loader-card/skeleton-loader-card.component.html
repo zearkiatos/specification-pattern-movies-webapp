@@ -1,0 +1,50 @@
+<div class="ui link cards wrapper">
+    <div class="ui card" *ngFor="let n of fakeArray">
+        <div class="image">
+            <ngx-skeleton-loader animation="progress" [theme]="{ 
+                    'height.px': 250
+                  }"></ngx-skeleton-loader>
+        </div>
+        <div class="content">
+            <div class="header">
+                <ngx-skeleton-loader animation="progress" [theme]="{ 
+                    'height.px': 30,
+                    'width.px': 100
+                  }"></ngx-skeleton-loader>
+            </div>
+            <div class="meta">
+                <ngx-skeleton-loader animation="progress" [theme]="{ 
+                    'height.px': 20,
+                    'width.px': 75
+                  }"></ngx-skeleton-loader>
+            </div>
+            <div class="description">
+                <ngx-skeleton-loader count="4" animation="progress"></ngx-skeleton-loader>
+                <ngx-skeleton-loader animation="progress" [theme]="{ 
+                    'height.px': 20,
+                    'width.px': 75
+                  }"></ngx-skeleton-loader>
+            </div>
+            <div class="trailer">
+                <ngx-skeleton-loader animation="progress" [theme]="{ 
+                    'height.px': 20,
+                    'width.px': 75
+                  }"></ngx-skeleton-loader>
+            </div>
+        </div>
+        <div class="extra content">
+            <span class="right floated">
+                <ngx-skeleton-loader animation="progress" [theme]="{ 
+                    'height.px': 20,
+                    'width.px': 75
+                  }"></ngx-skeleton-loader>
+            </span>
+            <span>
+                <ngx-skeleton-loader animation="progress" [theme]="{ 
+                    'height.px': 20,
+                    'width.px': 75
+                  }"></ngx-skeleton-loader>
+            </span>
+        </div>
+    </div>
+</div>

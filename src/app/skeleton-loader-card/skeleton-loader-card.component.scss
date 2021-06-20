@@ -1,0 +1,9 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+.card {
+    min-height: 300px !important;
+}

@@ -8,6 +8,9 @@ export class MovieApiRepository implements MovieRepository {
     constructor(private movieApiService: MovieApiService) {
 
     }
+    SearchByCriterial(body: any): Observable<MovieResponse> {
+        return this.movieApiService.SearchByCriterial(body);
+    }
     SearchAll(): Observable<MovieResponse> {
         return this.movieApiService.SearchAll();
     }
