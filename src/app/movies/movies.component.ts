@@ -17,6 +17,8 @@ export class MoviesComponent implements OnInit {
   @Output()
   public movieResponse:MovieResponse= new MovieResponse();
 
+  private criterial: any;
+
 
   constructor(private movieApiRepository: MovieApiRepository) {}
 
@@ -29,8 +31,16 @@ export class MoviesComponent implements OnInit {
     });
   }
 
-  nextPage(page:number) {
-    console.log(page);
+  goToPage (page: any) : void {
+    this.criterial = {
+      ...this.criterial,
+      offset: page
+    };
+    this.movieApiRepository.SearchByCriterial(this.criterial).subscribe(data =>  {
+      if(data) {
+        let jsonConvert: JsonConvert = new JsonConvert();
+        this.movieResponse = jsonConvert.deserializeObject(data, MovieResponse);
+      }
+    });
   }
-
 }

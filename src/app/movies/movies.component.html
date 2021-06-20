@@ -4,4 +4,4 @@
 <div *ngIf="movieResponse.movies.length == 0">
     <app-skeleton-loader-card [quantity]="20"></app-skeleton-loader-card>
 </div>
-<app-pagination [currentPage]="movieResponse.PageNumber" ></app-pagination>
+<app-pagination [currentPage]="movieResponse.PageNumber" (nextPage)="goToPage($event)" (prevPage)="goToPage($event)"></app-pagination>

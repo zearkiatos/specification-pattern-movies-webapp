@@ -1,4 +1,4 @@
 <div class="ui two bottom attached buttons">
-    <button class="ui button" *ngIf="currentPage !== 1">Preview</button>
+    <button class="ui button" *ngIf="currentPage !== 1" (click)="goPrev()">Prev</button>
     <button class="ui button" (click)="goNext()">Next</button>
 </div>
