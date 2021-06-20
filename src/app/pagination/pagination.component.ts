@@ -9,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent implements OnInit {
-  next:number = 0;
-  prev:number = 0;
+  next: number = 0;
+  prev: number = 0;
   @Output() nextPage = new EventEmitter<number>();
   @Output() prevPage = new EventEmitter<number>();
-  @Input() public currentPage:number = 1;
+  @Input() public currentPage: number = 1;
+  @Input() public quantity: number = 0;
   constructor() {
   }
 

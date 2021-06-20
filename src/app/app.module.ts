@@ -15,6 +15,8 @@ import { TruncatePipe } from './pipe/truncate.pipe';
 import { ArrayToStringPipe } from './pipe/array-to-string.pipe';
 import { SkeletonLoaderCardComponent } from './skeleton-loader-card/skeleton-loader-card.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { MessageComponent } from './message/message.component';
 
 const appRoutes: Routes = [
   {
@@ -33,7 +35,9 @@ const appRoutes: Routes = [
     TruncatePipe,
     ArrayToStringPipe,
     SkeletonLoaderCardComponent,
-    PaginationComponent
+    PaginationComponent,
+    DropdownComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

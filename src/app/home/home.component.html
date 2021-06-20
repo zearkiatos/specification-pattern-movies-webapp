@@ -2,7 +2,10 @@
     <div class="pt-2">
         <app-search></app-search>
     </div>
+    <div class="pt-2">
+        <app-dropdown [emptyData]="'Years'" [list]="yearsList" (itemSelected)="filterByYear($event)"></app-dropdown>
+    </div>
     <div class="pt-4">
-        <app-movies></app-movies>
+        <app-movies [year]="yearFilter"></app-movies>
     </div>
 </div>
