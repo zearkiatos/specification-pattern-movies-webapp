@@ -1,0 +1,27 @@
+<div class="ui card">
+  <div class="image">
+    <img src="{{movie.mediumCoverImage}}" />
+  </div>
+  <div class="content">
+    <div class="header">{{movie.title}}</div>
+    <div class="meta">
+      {{movie.genres | arrayToString}}
+    </div>
+    <div class="description">
+      {{movie.description | truncate : 200 : true }}
+    </div>
+    <div class="trailer">
+      <i class="youtube icon red"></i>
+      <a href={{movie.youtubeTrailerCode}} target="_blank" >Trailer</a>
+    </div>
+  </div>
+  <div class="extra content">
+    <span class="right floated">
+      year {{movie.year}}
+    </span>
+    <span>
+      <i class="star icon yellow"></i>
+      {{movie.rating}} rating
+    </span>
+  </div>
+</div>

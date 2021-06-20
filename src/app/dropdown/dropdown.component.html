@@ -1,0 +1,4 @@
+<select class="ui dropdown" (change)="onChange($event)">
+    <option value="">{{emptyData}}</option>
+    <option *ngFor="let item of list" value="{{item}}">{{item}}</option>
+</select>

@@ -1,0 +1,55 @@
+image: node:15-alpine
+stages:
+  - install
+  - build
+  - deploy
+
+install-dependencies:
+  stage: install
+  script:
+    - apk update
+    - apk add --update nodejs
+    - npm install -g @angular/cli
+    - npm rebuild node-sass
+    - npm install
+  artifacts:
+    expire_in: 1hr
+    paths:
+      - node_modules/
+  cache:
+    paths:
+      - node_modules/
+
+build-app:
+  stage: build
+  variables:
+    ENVIRONMENT: 'staging'
+    PUBLIC_URL: 'https://caprilespe.gitlab.io/specification-pattern-movies-webapp/'
+  dependencies:
+    - install-dependencies
+  script:
+    - echo "Deploy a review app 🛠"
+    - touch .env
+    - echo "NODE_ENV=${NODE_ENV}" > .env
+    - echo "NG_CLI_ANALYTICS=${NG_CLI_ANALYTICS}" >> .env
+    - echo "MOVIES_API_BASE_URL=${MOVIES_API_BASE_URL}" >> .env
+    - npm run deploy
+  artifacts:
+    expire_in: 1hr
+    paths:
+      - dist/specification-pattern-movies-webapp/
+
+pages:
+  stage: deploy
+  dependencies:
+    - build-app
+  script:
+    - echo "Deploy a review app 🚀"
+    - mv dist/specification-pattern-movies-webapp public
+  artifacts:
+    paths:
+      - public
+  environment:
+    name: staging
+  only:
+    - branches
