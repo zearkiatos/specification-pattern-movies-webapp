@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   value = "Search a movie";
   yearsList:number[] = []
   yearFilter:number | undefined;
+  titleFilter:string | undefined;
   constructor() { }
 
   ngOnInit(): void {
@@ -19,6 +20,10 @@ export class HomeComponent implements OnInit {
 
   filterByYear(year:any) {
     this.yearFilter = year;
+  }
+
+  filterByTitle(title:any) {
+    this.titleFilter = title;
   }
 
 }

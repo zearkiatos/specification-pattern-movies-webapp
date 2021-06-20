@@ -19,6 +19,8 @@ export class MoviesComponent implements OnInit {
   private criterial: any;
   @Input()
   public year: number | undefined;
+  @Input()
+  public title: string | undefined;
 
 
   constructor(private movieApiRepository: MovieApiRepository) { }
@@ -38,20 +40,31 @@ export class MoviesComponent implements OnInit {
         ...this.criterial,
         filters: [{
           "field": "Year",
-          "operator": "==",
+          "operator": ">=",
           "value": this.year
         }]
       };
-
-      console.log(this.criterial);
-
-      this.movieApiRepository.SearchByCriterial(this.criterial).subscribe(data => {
-        if (data) {
-          let jsonConvert: JsonConvert = new JsonConvert();
-          this.movieResponse = jsonConvert.deserializeObject(data, MovieResponse);
-        }
-      });
     }
+
+    if (this.title) {
+      this.criterial = {
+        ...this.criterial,
+        filters: [{
+          "field": "Title",
+          "operator": "like",
+          "value": this.title
+        }]
+      };
+    }
+
+    console.log(this.criterial);
+
+    this.movieApiRepository.SearchByCriterial(this.criterial).subscribe(data => {
+      if (data) {
+        let jsonConvert: JsonConvert = new JsonConvert();
+        this.movieResponse = jsonConvert.deserializeObject(data, MovieResponse);
+      }
+    });
   }
 
 

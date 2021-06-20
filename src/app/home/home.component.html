@@ -1,11 +1,11 @@
 <div class="ui container">
     <div class="pt-2">
-        <app-search></app-search>
+        <app-search (valueForSearch)="filterByTitle($event)"></app-search>
     </div>
     <div class="pt-2">
         <app-dropdown [emptyData]="'Years'" [list]="yearsList" (itemSelected)="filterByYear($event)"></app-dropdown>
     </div>
     <div class="pt-4">
-        <app-movies [year]="yearFilter"></app-movies>
+        <app-movies [year]="yearFilter" [title]="titleFilter"></app-movies>
     </div>
 </div>
